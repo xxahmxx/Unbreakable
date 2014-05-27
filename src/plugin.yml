@@ -1,0 +1,50 @@
+# 06 Dec 2013 : PSW : New
+# 21 Jan 2014 : PSW : Added permissions; corrected typo in username (doh!)
+# 22 Jan 2014 : PSW : Added softdepend, website
+# 20 Feb 2014 : PSW : Added unbreakable command
+# 23 Feb 2014 : PSW : Split out unbreakable.anvil from .ench
+
+name: Unbreakable
+main: main.java.com.yahoo.phil_work.unbreakable.Unbreakable
+version: 1.0
+author: filbert66
+description: Stops armor and tools from breaking
+softdepend: [LanguagesAPI]
+website: dev.bukkit.org/bukkit-plugins/unbreakableitems
+
+permissions:
+  unbreakable.*:
+    description: Gives access to ALL unbreakable features
+    children:
+      unbreakable.armor: true
+      unbreakable.tools: true
+      unbreakable.weapons: true
+      unbreakable.cmd: true
+      unbreakable.ench: true
+      unbreakable.anvil: true
+  unbreakable.armor:
+    description: Auto protect this user's armor as unbreakable
+    default: true
+  unbreakable.weapons:
+    description: Auto protect user's weapons as unbreakable
+    default: true
+  unbreakable.tools:
+    description: Auto protect user's tools as unbreakable
+    default: true
+  unbreakable.cmd:
+    description: Allows enchanting held item with Unbreakable by command
+    default: op
+  unbreakable.ench:
+    description: Allows enchanting item with Unbreakable on Enchant table 
+    default: true
+  unbreakable.anvil:
+    description: Allows enchanting an item with an Unbreakable book on anvil
+    default: true
+
+commands:
+  unbk:
+    alias: unbreakable
+    description: enchants held item with Unbreakable
+    usage: Use when holding repairable item with sufficient XP 
+    permission: unbreakable.cmd
+  
