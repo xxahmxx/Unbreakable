@@ -16,6 +16,16 @@ import net.minecraft.server.v1_7_R3.Enchantment;
 import net.minecraft.server.v1_7_R3.EnchantmentSlotType;
 import net.minecraft.server.v1_7_R3.ItemStack;
 
+ 
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.lang.reflect.Field;
+import java.util.Random;
+
+import net.minecraft.server.v1_7_R3.Enchantment;
+import net.minecraft.server.v1_7_R3.EnchantmentSlotType;
+
+
 public class UnbreakableEnch extends Enchantment {
 	private static Random rnd = new Random (java.lang.System.currentTimeMillis());
 	private static Enchantment[] c;

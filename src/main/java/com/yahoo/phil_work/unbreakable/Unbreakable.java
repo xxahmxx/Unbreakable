@@ -249,6 +249,7 @@ public class Unbreakable extends JavaPlugin implements Listener {
 		try {
 			Method _asNMSCopy = class_CraftItemStack.getMethod("asNMSCopy", Class.forName ("org.bukkit.inventory.ItemStack"));
 			nms = ( net.minecraft.server.v1_7_R3.ItemStack) _asNMSCopy.invoke (null /*static method*/, item);
+
 		}
 		catch (Exception ex) {
 			ex.printStackTrace();
